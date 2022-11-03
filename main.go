@@ -1,6 +1,5 @@
 package main
 
-// MjY0ODI2ODI2MzUyODg1NzYz.G2PdSz.mcBpTZsekaerqnVfXhnz4ynsExwkD2tOSIW0is
 import(
 	"fmt"
 	"github.com/fei-felicia-chen/myBot/config"
@@ -18,5 +17,4 @@ func main() {
 	bot.Start()
 
 	<-make(chan struct{})
-	return
 }
