@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/fei-felicia-chen/myBot/config"
 	"github.com/bwmarrin/discordgo"
+	"math/rand"
 )
 
 var (
@@ -44,6 +45,13 @@ func msgHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 	if m.Content == "tom" {
-		_, _ = s.ChannelMessageSend(m.ChannelID, "meowww")
+		random := rand.Intn(3)
+		if random == 0 {
+			_, _ = s.ChannelMessageSend(m.ChannelID, "meowww")
+		} else if random == 1 {
+			_, _ = s.ChannelMessageSend(m.ChannelID, "meowmeow")
+		} else {
+			_, _ = s.ChannelMessageSend(m.ChannelID, "meoowww")
+		}
 	}
 }
