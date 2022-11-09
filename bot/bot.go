@@ -53,5 +53,7 @@ func msgHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 		} else {
 			_, _ = s.ChannelMessageSend(m.ChannelID, "meoowww")
 		}
+	} else if (m.Content == "TOM") {
+		_, _ = s.ChannelMessageSend(m.ChannelID, "MAAAAAAAAAAARW")
 	}
 }
